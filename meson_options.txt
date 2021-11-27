@@ -1,0 +1,16 @@
+option(
+  'sanitize', type : 'boolean', value : false,
+  description : 'Turn on sanitization to detect memory access errors and undefined behavior. This is a big performance hit.')
+option(
+  'extra_logging', type : 'array', choices : ['event-loop'], value : [],
+  description : 'Turn on extra logging for debugging in this build.')
+option('native_optimizations', type : 'boolean', value : true)
+option(
+  'link_time_optimization', type : 'boolean', value : true,
+  description : 'Turn Link Time Optimization (LTO) or/off.')
+option(
+  'profile', type : 'boolean', value : false,
+  description : 'Use the -pg compile flag to add profiling information')
+option(
+  'build_universal_binary', type : 'boolean', value : false,
+  description : 'Build a universal binary (ARM + Intel on macOS, ignored on other platforms)')
